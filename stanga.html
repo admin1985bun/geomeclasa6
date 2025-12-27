@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meniu Lecții</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(180deg, #0f2557 0%, #1a3a6b 100%);
+            color: #e8e8e8;
+            padding: 20px 15px;
+            line-height: 1.6;
+        }
+        
+        .section-title {
+            color: #ffffff;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 25px 0 15px 0;
+            padding-bottom: 8px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .section-title:first-child {
+            margin-top: 0;
+        }
+        
+        .subsection-title {
+            color: #ffffff;
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin: 15px 0 10px 0;
+            padding: 8px 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            border-left: 3px solid #4a90e2;
+        }
+        
+        .menu-table {
+            width: 100%;
+            margin-bottom: 5px;
+        }
+        
+        .menu-item {
+            background: rgba(230, 230, 230, 0.95);
+            padding: 12px 15px;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            border-left: 3px solid #4a90e2;
+        }
+        
+        .menu-item:hover {
+            background: rgba(240, 240, 240, 1);
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .menu-item ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .menu-item li {
+            margin: 6px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .menu-item li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #4a90e2;
+            font-weight: bold;
+        }
+        
+        .menu-item a {
+            color: #000066;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+        
+        .menu-item a:hover {
+            color: #4a90e2;
+            text-decoration: underline;
+        }
+        
+        .video-link {
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .video-link::before {
+            content: "🎥";
+            margin-right: 5px;
+        }
+        
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.2);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #4a90e2;
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #5ba3ff;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px 10px;
+            }
+            
+            .section-title {
+                font-size: 1rem;
+            }
+            
+            .subsection-title {
+                font-size: 0.9rem;
+            }
+            
+            .menu-item {
+                padding: 10px 12px;
+            }
+            
+            .menu-item a {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="section-title">Lecții interactive</div>
+    
+    <div class="subsection-title">Noțiuni introductive</div>
+    <div class="menu-table">
+        <div class="menu-item">
+            <ul>
+                <li><a href="pctsmdr/pctdrsm.html" target="intro">Punct, semidreapta</a></li>
+            </ul>
+        </div>
+        
+        <div class="menu-item">
+            <ul>
+                <li><a href="semipl/semipl.html" target="intro">Semiplan</a></li>
+                <li><a href="https://youtu.be/8M0ml-UwiJA" target="_new" class="video-link">Explicații video</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="subsection-title">Unghiul</div>
+    <div class="menu-table">
+        <div class="menu-item">
+            <ul>
+                <li><a href="unghi/unghi1.html" target="intro">Definiție</a></li>
+                <li><a href="unghi2/clasifung.html" target="intro">Clasificare</a></li>
+            </ul>
+        </div>
+        
+        <div class="menu-item">
+            <ul>
+                <li><a href="unghi/bisect1.html" target="intro">Bisectoare</a></li>
+                <li><a href="https://youtu.be/Rq5xu2PfID4" target="_new" class="video-link">Explicații video</a></li>
+            </ul>
+        </div>
+        
+        <div class="menu-item">
+            <ul>
+                <li><a href="unghiopv/unghopv.html" target="intro">Unghiuri op. la vârf</a></li>
+                <li><a href="unghiopv/aplic1.html" target="intro">Aplicație</a></li>
+            </ul>
+        </div>
+        
+        <div class="menu-item">
+            <ul>
+                <li><a href="ungjp/def.html" target="intro">< în jurul unui punct</a></li>
+                <li><a href="ungjp/teoujp.html" target="intro">Teoremă</a></li>
+                <li><a href="ungjp/unghad.html" target="intro">Unghiuri adiacente</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="subsection-title">Perpendicularitate</div>
+    <div class="menu-table">
+        <div class="menu-item">
+            <ul>
+                <li><a href="perpend/perpdef.html" target="intro">Definiție</a></li>
+                <li><a href="perpend/constrp.html" target="intro">Construcție 1</a></li>
+                <li><a href="perpend/constrp2.html" target="intro">Construcție 2</a></li>
+                <li><a href="perpend/distant.html" target="intro">Distanța</a></li>
+                <li><a href="perpend/mediat.html" target="intro">Mediatoarea</a></li>
+                <li><a href="perpend/teo1p.html" target="intro">Teorema 1</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="subsection-title">Drepte paralele</div>
+    <div class="menu-table">
+        <div class="menu-item">
+            <ul>
+                <li><a href="paral1/paraldef.html" target="intro">Definiție</a></li>
+                <li><a href="paral1/altern.html" target="intro">Unghiuri</a></li>
+                <li><a href="paral1/teo1a.html" target="intro">Aplicație</a></li>
+                <li><a href="paral1/axioma1.html" target="intro">Axioma Euclid</a></li>
+                <li><a href="paral1/teo1b.html" target="intro">Teoremă</a></li>
+                <li><a href="paral1/rteo1b.html" target="intro">Reciproca teoremei</a></li>
+            </ul>
+        </div>
+        
+        <div class="menu-item">
+            <ul>
+                <li><a href="paral1/consec.html" target="intro">Consecință nr. 1</a></li>
+                <li><a href="paral1/prop1.html" target="intro">Proprietatea nr. 1</a></li>
+                <li><a href="paral1/prop2.html" target="intro">Proprietatea nr. 2</a></li>
+                <li><a href="paral1/constr1.html" target="intro">Construcție</a></li>
+            </ul>
+        </div>
+        
+        <div class="menu-item">
+            <ul>
+                <li><a href="paral1/obs1.html" target="intro">Observația nr. 1</a></li>
+                <li><a href="paral1/obs2.html" target="intro">Observația nr. 2</a></li>
+                <li><a href="paral1/unghilatp.html" target="intro">Unghiuri cu laturi ||</a></li>
+            </ul>
+        </div>
+        
+        <div class="menu-item">
+            <ul>
+                <li><a href="paral1/teste/index.html" target="intro">Problema nr. 1</a></li>
+                <li><a href="paral1/teste2/index.html" target="intro">Problema nr. 2</a></li>
+                <li><a href="paral1/teste3/index.html" target="intro">Problema nr. 3</a></li>
+                <li><a href="paral1/teste4/index.html" target="intro">Problema nr. 4</a></li>
+                <li><a href="paral1/teste5/index.html" target="intro">Problema nr. 5</a></li>
+                <li><a href="paral1/teste6/index.html" target="intro">Problema nr. 6</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="subsection-title">Cercul</div>
+    <div class="menu-table">
+        <div class="menu-item">
+            <ul>
+                <li><a href="dfncerc/index.html" target="intro">Definirea cercului</a></li>
+                <li><a href="pzdrcr/pozdrcerc.html" target="intro">Poziții: dreapta-cerc</a></li>
+            </ul>
+        </div>
+        
+        <div class="menu-item">
+            <ul>
+                <li><a href="pozcerc/pozcerc.html" target="intro">Poziții: cerc-cerc</a></li>
+                <li><a href="https://youtu.be/gHYU139brsg" target="_new" class="video-link">Explicații video</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="subsection-title">Triunghiul</div>
+    <div class="menu-table">
+        <div class="menu-item">
+            <ul>
+                <li><a href="triunghi/triudef.html" target="intro">Definiție</a></li>
+                <li><a href="triunghi/cntlul.html" target="intro">Construcție-LUL</a></li>
+                <li><a href="triunghi/cntulu.html" target="intro">Construcție-ULU</a></li>
+                <li><a href="triunghi/cntlll.html" target="intro">Construcție-LLL</a></li>
+            </ul>
+        </div>
+        
+        <div class="menu-item">
+            <ul>
+                <li><a href="triunghi/sumaungh.html" target="intro">Teorema 1</a></li>
+                <li><a href="triunghi/unghxtd.html" target="intro">Unghi ext.-def.</a></li>
+                <li><a href="triunghi/unghext.html" target="intro">Unghi ext.-teorema</a></li>
+            </ul>
+        </div>
+        
+        <div class="menu-item">
+            <ul>
+                <li><a href="triunghi/clastr1.html" target="intro">Clasificare: unghiuri</a></li>
+                <li><a href="triunghi/clastr2.html" target="intro">Clasificare: laturi</a></li>
+            </ul>
+        </div>
+        
+        <div class="menu-item">
+            <ul>
+                <li><a href="triunghi/median.html" target="intro">Mediana</a></li>
+                <li><a href="teste/median/index.html" target="intro">::: Problema 1</a></li>
+            </ul>
+        </div>
+        
+        <div class="menu-item">
+            <ul>
+                <li><a href="triunghi/inalt.html" target="intro">Înălțimea</a></li>
+                <li><a href="teste/inalt/index.html" target="intro">::: Problema 1</a></li>
+            </ul>
+        </div>
+        
+        <div class="menu-item">
+            <ul>
+                <li><a href="triunghi/bisect.html" target="intro">Bisectoarea</a></li>
+                <li><a href="teste/bisect/index.html" target="intro">::: Problema 1</a></li>
+            </ul>
+        </div>
+        
+        <div class="menu-item">
+            <ul>
+                <li><a href="triunghi/mediat.html" target="intro">Mediatoarea</a></li>
+                <li><a href="teste/mediat/index.html" target="intro">::: Problema 1</a></li>
+            </ul>
+        </div>
+        
+        <div class="menu-item">
+            <ul>
+                <li><a href="teste/teorie/index.html" target="intro">Test/teorie</a></li>
+            </ul>
+        </div>
+        
+        <div class="menu-item">
+            <ul>
+                <li><a href="triunghi/cngdef.html" target="intro">Congruența tr.-DEF</a></li>
+                <li><a href="triunghi/cnglul.html" target="intro">Congruența tr.-LUL</a></li>
+                <li><a href="triunghi/cngulu.html" target="intro">Congruența tr.-ULU</a></li>
+                <li><a href="triunghi/cnglll.html" target="intro">Congruența tr.-LLL</a></li>
+                <li><a href="triunghi/cngluu.html" target="intro">Congruența tr.-LUU</a></li>
+            </ul>
+        </div>
+        
+        <div class="menu-item">
+            <ul>
+                <li><a href="triunghi/cngcc.html" target="intro">Congruența tr.-CC</a></li>
+                <li><a href="triunghi/cngcu.html" target="intro">Congruența tr.-CU</a></li>
+                <li><a href="triunghi/cngic.html" target="intro">Congruența tr.-IC</a></li>
+            </ul>
+        </div>
+        
+        <div class="menu-item">
+            <ul>
+                <li><a href="triunghi/trisos.html" target="intro">Triunghiul isoscel</a></li>
+                <li><a href="triunghi/triech.html" target="intro">Triunghiul echilateral</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="subsection-title">Tr. dreptunghic</div>
+    <div class="menu-table">
+        <div class="menu-item">
+            <ul>
+                <li><a href="trdrpt/index.html" target="_new">Proprietăți</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
